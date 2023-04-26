@@ -1,0 +1,40 @@
+{
+  "name": "q-sign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "setup": "npm install",
+    "fmt": "prettier --write './**/*.sol' './**/*.js' './**/*.ts' './**/*.json' './**/*.md'",
+    "ganache": "ganache-cli --accounts=50 --deterministic --defaultBalanceEther=1000000",
+    "compile": "truffle compile",
+    "solhint": "solhint 'contracts/**/*.sol'",
+    "slither": "slither --solc-disable-warnings --exclude-dependencies .",
+    "test": "truffle test",
+    "migrate": "truffle migrate --reset"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qredo/qsign.git"
+  },
+  "author": "Venimir Petkov",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/qredo/qsign/issues"
+  },
+  "homepage": "https://github.com/qredo/qsign#readme",
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^2.0.8",
+    "chai": "^4.3.6",
+    "eslint": "^8.15.0",
+    "eth-gas-reporter": "^0.2.0",
+    "prettier": "^2.6.2",
+    "prettier-plugin-solidity": "1.0.0-alpha.54",
+    "rlp": "^3.0.0",
+    "solhint": "^3.3.7",
+    "truffle": "^5.1.35",
+    "truffle-plugin-verify": "^0.5.33",
+    "web3": "^1.8.1",
+    "web3-eth-contract": "^1.7.3"
+  }
+}
