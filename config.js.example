@@ -1,0 +1,16 @@
+module.exports = {
+  // BIP39 mnemonic phrase
+  MNEMONIC: "",
+  
+  // INFURA API key
+  INFURA_KEY: "",
+
+  // ETHERSCAN API key
+  ETHERSCAN_KEY: "",
+
+  // Proxy admin - can upgrade implementation contract
+  PROXY_ADMIN_ADDRESS: "",
+
+  // QSignTypes library address
+  Q_SIGN_TYPES: "",
+};
