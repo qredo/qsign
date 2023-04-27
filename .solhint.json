@@ -1,7 +1,7 @@
 {
   "extends": "solhint:recommended",
   "rules": {
-    "compiler-version": ["error", "0.8.13"],
+    "compiler-version": "off",
     "func-visibility": [
       "warn",
       {
@@ -9,12 +9,14 @@
       }
     ],
     "func-name-mixedcase": "off",
-    "avoid-low-level-calls": "off",
-    "contract-name-camelcase": "off",
+    "avoid-low-level-calls": "error",
+    "contract-name-camelcase": ["error", { "leadingUpperCase": true }],
     "no-empty-blocks": "off",
     "no-inline-assembly": "off",
-    "not-rely-on-time": "off",
+    "not-rely-on-time": "error",
+    "no-global-import": "off",
     "reason-string": ["warn", { "maxLength": 128 }],
-    "var-name-mixedcase": "off"
+    "var-name-mixedcase": "off",
+    "avoid-sha3": "warn"
   }
 }
