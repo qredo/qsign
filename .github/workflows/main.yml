@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-    - "*"
+      - "*"
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run solhint
-        uses: protofire/solhint-action@v3.4.1
+        uses: solidity/actions/solhint@v1.0.1
         with:
           args: .
 
