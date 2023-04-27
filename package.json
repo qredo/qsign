@@ -31,7 +31,7 @@
     "prettier": "^2.6.2",
     "prettier-plugin-solidity": "1.0.0-alpha.54",
     "rlp": "^3.0.0",
-    "solhint": "^3.3.7",
+    "solhint": "^3.4.1",
     "truffle": "^5.1.35",
     "truffle-plugin-verify": "^0.5.33",
     "web3": "^1.8.1",

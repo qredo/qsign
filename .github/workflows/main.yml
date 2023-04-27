@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run solhint
-        uses: ethereum/actions/solhint@v1
+        uses: protofire/solhint-action@v3.4.1
         with:
           args: .
 
