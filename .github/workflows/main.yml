@@ -12,15 +12,22 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run solhint
-        uses: solidity/actions/solhint@v1.0.1
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
-          args: .
+          node-version: 14
 
       - name: Install dependencies
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: install # will run `yarn install` command
+        run: yarn install
 
-      - run: yarn ganache -d > /dev/null &
-      - run: yarn test
+      - name: Run solhint
+        run: npx solhint .
+
+      - name: Start Ganache
+        run: |
+          yarn global add ganache-cli
+          yarn ganache -d > /dev/null &
+        shell: bash
+
+      - name: Run tests
+        run: yarn test
